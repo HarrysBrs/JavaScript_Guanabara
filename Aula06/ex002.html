@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript</title>
+    <style>
+        body{
+            background-color: rgb(97, 97, 224);
+            margin: 0px;
+        }
+        div#titulos-meio {
+            text-align: center;
+            background-color: white;
+            margin-top: 300px;
+            padding: 50px;
+        }
+        h1 {
+            color: rgb(0, 0, 0);
+        }
+        h2 {
+            color: rgba(0, 0, 0, 0.6);
+        }
+        p {
+            font-family: sans-serifHe;
+        }
+    </style>
+</head>
+<body>
+    <div id="titulos-meio">
+        <h1>Iniciando os Estudos</h1>
+        <h2>JavaScript</h2>
+        <p id="usuario-nome"> </p>
+    </div>
+    <Script>
+        var nome = window.prompt('Qual o seu nome?')
+        var paragrafoNome = document.getElementById ('usuario-nome')
+        if (paragrafoNome) {
+            paragrafoNome.textContent = `${nome} - Bons Estudos!`
+        }
+
+   </Script>
+</body>
+</html>
