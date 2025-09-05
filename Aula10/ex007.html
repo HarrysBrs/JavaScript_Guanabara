@@ -4,17 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somando Números</title>
+    <style>
+        div#res {
+            width: 70px;
+            background-color: rgb(113, 113, 236);
+            box-shadow: 1px;
+            margin-top: 10px;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <h1>Somando Valores</h1>
     <input type="number" name="Nn1" id="Nn1"> +
     <input type="number" name="Nn2" id="Nn2">
-    <input type="button" value="Somar" onclick="Somar()">
-    <p>Aula 10 22h47</p>
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
     <script>
         function somar() {
             var cx1 = window.document.getElementById('Nn1')
-            var cx2 = window.document.getSelection('input#Nn2')
+            var cx2 = window.document.querySelector('input#Nn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(cx1.value)
+            var n2 = Number(cx2.value)
+            var s = n1 + n2
+            res.innerHTML = `A Soma Entre ${n1} e ${n2} é ${s}`
         }
     </script>
 </body>
