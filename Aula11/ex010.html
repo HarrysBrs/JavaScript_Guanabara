@@ -15,9 +15,43 @@
         body {
             background: linear-gradient(90deg, rgba(42,123,155,1)0%,rgba(87,199,133,1)50%,rgba(237,221,831)100%)
         }
+        div#Velocidade {
+            margin-left: 675px;
+        }
+        p#txt1 {
+            margin-bottom: 5px;
+            padding: 0px;
+            margin-left: 13px;
+            color: white;
+            font: arial;
+        }
+        div#res {
+            color: white;
+            font: arial;
+            margin-left: 350px;
+            margin-top: 30px;
+        }
     </style>
 <body>
     <h1>Calculador de <strong>MULTAS</strong></h1>
-    <input type="number" name="txtvel" id="txtvel">
+    <div id="Velocidade">
+        <p id="txt1">Velocidade do Veículo (Km/h)</p>
+        <input type="number" name="txtvel" id="txtvel">
+        <input type="button" value="Verificar" onclick="Calcular()">
+    </div>
+    <div id="res">
+
+    </div>
+    <script>
+        function Calcular() {
+            var txtv = window.document.getElementById('txtvel')
+            var vel = Number(txtv.value)
+            var res = window.document.getElementById('res')
+            console.log(`O que está dentro da variável vel é ${vel}`) 
+            if (vel >= 72) {
+                res.innerText = `Sua Velocidade é de ${vel} KM/h. Você excedeu o limite de velocidade em 20%, portanto sua multa é de R$ 130,16 e 4 Pontos na Carteira`
+            }
+        }
+    </script>
 </body>
 </html>

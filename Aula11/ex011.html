@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar de Estrangeiro</title>
+</head>
+    <style>
+        h1 {
+            margin-top: 200px;
+            margin-left: 38%;
+            font-size: 42pt;
+        }
+        div#Nacionalidade {
+            margin-left: 42%;
+            font-size: 30pt;
+        }
+        div#res {
+            padding: 250px;
+            font-size: 30pt;
+            text-align: center;
+            margin-top: 100px;
+            background-repeat: no-repeat;
+            color: white;
+        }
+        input {
+            font-size: 20pt;
+        }
+    </style>
+<body>
+    <h1>Verificador de Nacionalidade</h1>
+    <div id="Nacionalidade">
+        <p>Digite onde você <strong>Nasceu!</strong></p>
+        <input type="text" name="txtveli" id="txtvel">
+        <input type="button" value="Verificar" onclick="verificar()">
+    </div>
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar() {
+            var grin = window.document.getElementById('txtvel')
+            var vel = grin.value
+            var res = window.document.getElementById('res')
+            console.log(vel)
+            // toLowerCase - Retorna a String co os valores em minusculo
+           if (vel.toLowerCase() === "brasil") {
+                res.innerHTML = 'Você é BRASILEIRO!';
+                res.style.backgroundImage = 'url(imagens/fundobrasil.jpeg)';
+                res.style.backgroundRepeat = 'no-repeat';
+                res.style.backgroundPosition = 'center';
+                res.style.color = 'white'; // A cor da fonte precisa estar no if também!
+            } else {
+                res.innerHTML = 'Você é ESTRANGEIRO!';
+                res.style.color = 'black';
+                res.style.backgroundImage = 'url(imagens/fundogringo.jpg)';
+                res.style.backgroundPosition = 'center';
+                res.style.backgroundRepeat = 'no-repeat';
+                res.style.color = 'white';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do dia</title>
+</head>
+<style>
+    header{
+        margin-left: 655px;
+        margin-top: 50px;
+        color:rgb(99, 99, 99);
+        font-family: arial;
+        font-size: 20pt;
+    }
+    section{
+        margin-top: 60px;
+        height: 500px;
+        width: 700px;
+        background-color: white;
+        box-shadow: 0px 2px 6px 0px;
+        margin-left: 450px;
+        border-radius: 10px;
+    }
+    footer{
+        margin-left: 710px;
+        margin-top: 50px;
+        color: rgb(99, 99, 99);
+    }
+    a{
+        text-decoration: none;
+        color: rgb(99, 99, 99);
+        font-size: 20pt;
+        text-decoration: solid;
+    }
+    div#textMuda {
+        margin-left: 200px;
+        padding-top: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15pt;
+    }
+    div#imgMuda {
+        height: 375px;
+        width: 375px;
+        margin-left: 170px;
+        margin-top: 25px;
+        border-radius: 187px;
+    }
+</style>
+<body id="corpoBody">
+    <header>
+        <h1>Hora do Dia</h1>
+    </header>
+    <section>
+        <div id="textMuda">
+            
+        </div>
+        <div id="imgMuda">
+
+        </div>
+    </section>
+    <footer>
+        <h2>&reg;<a href="https://www.cursoemvideo.com/curso/javascript/aulas/condicoes-em-javascript/modulos/exercicios-javascript-parte-1/" target="_blank">Curso em Vídeo</a></h2>
+    </footer>
+    <script>
+        var pegaHora = new Date() 
+        var hora = pegaHora.getHours();
+        if (hora >= 6 ) {
+            var textoTela = window.document.getElementById('textMuda')
+                textoTela.innerHTML = `Agora são Exatamente <strong>${hora}<strong> Horas!`
+            var imgTela = window.document.getElementById('imgMuda')
+                imgTela.style.backgroundImage = 'url(imagens/manha.jpg)'
+            var body = window.document.getElementById('corpoBody') 
+                body.style.backgroundColor = '#fce19c'    
+        } if (hora > 12) {
+            var textoTela = window.document.getElementById('textMuda')
+                textoTela.innerHTML = `Agora são Exatamente <strong>${hora}<strong> Horas!`
+            var imgTela = window.document.getElementById('imgMuda')
+                imgTela.style.backgroundImage = 'url(imagens/tarde.jpg)'
+            var body = window.document.getElementById('corpoBody') 
+                body.style.backgroundColor = 'rgb(206, 99, 41)'         
+        } if (hora >=18) {
+            var textoTela = window.document.getElementById('textMuda')
+                textoTela.innerHTML = `Agora são Exatamente <strong>${hora}<strong> Horas!`
+            var imgTela = window.document.getElementById('imgMuda')
+                imgTela.style.backgroundImage = 'url(imagens/noite.jpg)'
+            var body = window.document.getElementById('corpoBody') 
+                body.style.backgroundColor = 'rgb(109, 109, 250)'   
+        }
+    </script>
+</body>
+</html>
