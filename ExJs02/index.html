@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar de Idade</title>
+</head>
+<style>
+    body {
+        background-color: rgb(6, 151, 255);
+    }
+    section {
+        margin-top: 60px;
+        height: 90%;
+        max-width: 600px;
+        background-color: white;
+        padding: 50px 50px 50px 50px;
+    }
+
+</style>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <label>Ano de Nascimento: </label><input type="number" name="inId" id="inId"><br><br>
+        <label>Sexo: </label><input type="checkbox" name="inSex" id="inSex"><label for="Masculino">Masculino</label>
+        <input type="checkbox" name="inSex" id="inSex"><label for="Feminino">Femininino</label><br><br>
+        <input type="button" value="Verificar" onclick="verificar()">
+    </section>
+</body>
+</html>
